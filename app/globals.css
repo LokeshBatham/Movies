@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-montserrat);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+/* Apply Montserrat to all text elements */
+* {
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+/* For inputs */
+input{
+  border: none;
+}
+input:focus {
+  border: none;
+}
+
+/* For buttons */
+/* button:hover,
+button:focus {
+  outline: none;
+  border: none;
+} */
+
+.back{
+  background-image: url("../public/Vectors.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+h1{
+  font-weight: 600; /* 600 is semibold */
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.logindiv {
+  height: 100vh;              
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;        
+  gap: 20px;                  
+  background-color: #022c43;  
+  color: white;               
+}
+
+.logindiv input::placeholder {
+  color: white;
+  opacity: 1; 
+  font-weight: 400; 
+  font-style: normal;
+}
+
+.input{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #224957;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-button{
+  background-color: #2BD17E;  
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+}
+
+.empty-movie-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  text-align: center;
+  background-color: #022c43; 
+  color: white;
+}
+
+.empty-movie-list button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2BD17E;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.empty-movie-list button:hover {
+  background-color: #2BD17E;
+  transform: scale(1.05);
+}
+
+.movielist{
+  background-color: #022c43; 
+  color: white;
+  height: 100vh;
+}
+
+.cancel-button{
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Mobile responsive utilities */
+@media (max-width: 640px) {
+  .logindiv {
+    padding: 20px;
+  }
+  
+  .logindiv h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .login-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.add-button{
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
